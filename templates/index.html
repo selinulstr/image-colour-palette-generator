@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Color Extract</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Image Color Extract </h1>
+<div class="center">
+ <form class="form" action="/get_colors" method="post" enctype="multipart/form-data">
+     <label>File to upload:</label><br>
+     <label class="btn" for="image">Select File</label>
+    <input class="input" type="file" id="image" name="file" required><br><br>
+    <button class="btn" type="submit">Generate</button>
+        </form>
+    </div>
+</body>
+</html>

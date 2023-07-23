@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colors</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="table">
+    <div class="table-header">
+        <img src="{{url_for('static', filename=filename)}}">
+        </div>
+    <div class="table-header-cell">
+Color Name
+</div>
+<div class="table-header-cell">
+Hex Code
+</div>
+<div class="table-header-cell">
+Color
+</div>
+    <div class="resp-table-body">
+         {% for hex, name in colors.items(): %}
+          <div class="resp-table-row">
+
+    <div class="table-body-cell">
+{{name}}
+</div>
+              <div class="table-body-cell">
+{{hex}}
+</div>
+              <div class="table-body-cell"  style="background-color: {{hex}}; width:100px; height:30px; border: 1px solid black;">
+
+</div>
+              </div>
+        {% endfor %}
+</div>
+
+    <div>
+</body>
+</html>
